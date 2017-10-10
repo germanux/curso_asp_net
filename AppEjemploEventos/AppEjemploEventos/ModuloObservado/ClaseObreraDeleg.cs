@@ -13,7 +13,9 @@ namespace AppEjemploEventos
         public void AlCurroCallBK(TipoDel_AlEmpezar funAlEmpezar)
         {
             Console.WriteLine("--> ClaseObrera.AlCurro(): Empezando a currar");
-            funAlEmpezar("LLAMANDO A CALLBACK");
+            if (funAlEmpezar != null)
+                funAlEmpezar("LLAMANDO A CALLBACK");
+            funAlEmpezar?.Invoke("LLAMANDO A CALLBACK");
             Console.ReadKey();
 
             Console.WriteLine("--> ClaseObrera.AlCurro(): Currando");

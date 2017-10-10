@@ -23,6 +23,10 @@ namespace AppEjemploEventos
             //obrera.AlCurroCallBK(escuchadorB.AvisameAlEmpezar);
             obrera.AlCurroCallBK(escuchadorA.AvisameAlEmpezar);
         }
+        static void FunAvisameAlAcabarEstatica()
+        {
+            Console.WriteLine("FunAvisameAlAcabarEstatica");
+        }
         static void GestionandoObservadores()
         {
             ClaseObrera obrera = new ClaseObrera();
