@@ -45,6 +45,7 @@
     <Compile Include="ModuloObservador\EscuchadorB.cs" />
     <Compile Include="ModuloObservado\ClaseObrera.cs" />
     <Compile Include="ModuloObservador\ClaseObservadorA.cs" />
+    <Compile Include="ModuloObservado\ClaseObreraDeleg.cs" />
     <Compile Include="ModuloObservado\IEscuchador.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -52,7 +52,6 @@ namespace AppEjemploEventos
                     metodo.Invoke(observador, new string[]{"OU YEAH! *** "});
                 }
             }
-
         }
         ~ClaseObrera()
         {

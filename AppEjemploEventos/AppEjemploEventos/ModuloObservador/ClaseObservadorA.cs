@@ -12,6 +12,10 @@ namespace AppEjemploEventos
         {
             Console.WriteLine("<-- ClaseObservadorA.AvisameAlEmpezar(): [{0}] - {1}", infoEvento, "UNO");
         }
+        public void AvisameAlEmpezarHH(string infoEventoXX)
+        {
+            Console.WriteLine("<-- ClaseObservadorA.AvisameAlEmpezarHH(): [{0}] - {1}", infoEventoXX, "UNO");
+        }
         public int AvisameAlSeguir(string infoEvento = "")
         {
             string texto = "<-- ClaseObservadorA.AvisameAlSeguir: INFO: " + infoEvento + ".";

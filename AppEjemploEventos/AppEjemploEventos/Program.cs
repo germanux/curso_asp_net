@@ -10,10 +10,18 @@ namespace AppEjemploEventos
     {
         static void Main(string[] args)
         {
-            GestionandoObservadores();
-            System.GC.Collect();
-            Console.WriteLine("FIN");
+            GestionandoCallbacks();
             Console.ReadKey();
+        }
+        static void GestionandoCallbacks()
+        {
+            ClaseObreraDeleg obrera = new ClaseObreraDeleg();
+
+            ClaseObservadorA escuchadorA = new ClaseObservadorA();
+            EscuchadorB escuchadorB = new EscuchadorB();
+
+            //obrera.AlCurroCallBK(escuchadorB.AvisameAlEmpezar);
+            obrera.AlCurroCallBK(escuchadorA.AvisameAlEmpezar);
         }
         static void GestionandoObservadores()
         {
