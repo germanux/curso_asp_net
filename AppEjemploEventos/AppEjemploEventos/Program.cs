@@ -21,7 +21,34 @@ namespace AppEjemploEventos
             EscuchadorB escuchadorB = new EscuchadorB();
 
             //obrera.AlCurroCallBK(escuchadorB.AvisameAlEmpezar);
-            obrera.AlCurroCallBK(escuchadorA.AvisameAlEmpezar);
+            /*obrera.AlCurroCallBK(escuchadorA.AvisameAlEmpezar, 
+                (string str) => {
+                    string texto = "Función Lambda (fun anonima): " + str;
+                    Console.WriteLine(texto);
+                    return texto.Length; 
+                }, FunAvisameAlAcabarEstatica);*/
+            
+            obrera.FuncionCampoAlEmpezar += escuchadorA.AvisameAlEmpezar;
+            obrera.FuncionCampoAlEmpezar += escuchadorA.AvisameAlEmpezar;
+            obrera.FuncionCampoAlEmpezar += escuchadorA.AvisameAlEmpezar;
+            obrera.FuncionCampoAlEmpezar += escuchadorB.AvisameAlEmpezar;
+            obrera.FuncionCampoAlEmpezar -= escuchadorA.AvisameAlEmpezar;
+
+            obrera.FuncionCampoAlSeguir = (string str) =>
+            {
+                string texto = "Función Lambda (fun anonima): " + str;
+                Console.WriteLine(texto);
+                return texto.Length;
+            };
+            obrera.FuncionCampoAlAcabar = FunAvisameAlAcabarEstatica;
+            obrera.FunEventoAviso += FunEstaticaEvAviso;
+            obrera.AlCurroDelegados();
+            obrera.MetodoExtensionObrera("ARGUMENTO");
+            Console.WriteLine("   Solo  Tenemos 50 minutos  ".GatchetoString());
+        }
+        static void FunEstaticaEvAviso(object sender, MisArgumentosEventArgs args)
+        {
+            Console.WriteLine(sender.ToString() + ", " + args.ToString() + ", " );
         }
         static void FunAvisameAlAcabarEstatica()
         {
