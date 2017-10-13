@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gestión de usuarios</title>
+</head>
+<body>
+    <a href="/">
+        <img src="images/favoritos.png" alt="Logotipo app favoritos" />
+    </a>
+    <h1>Gestión de usuarios</h1>
+    <form id="nuevoUsuario" name="nuevoUsuario">
+        <label>Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Intruzca su nombre"  tabindex="3" /><br />
+        <label>E-mail:</label>
+        <input type="email" id="email" name="email" required placeholder="Intruzca su email" tabindex="4"/><br />
+        <label>Año:</label>
+        <input type="number" id="anio" name="anio" min="1850" max="2017" step="1" required value="1990" tabindex="5"/><br/>
+        <label>Genero:</label><br/>
+        <input type="radio" id="genero_h" name="genero" value="1" checked tabindex="6"/>Hombre<br />
+        <input type="radio" id="genero_m" name="genero" value="2"  tabindex="7"/>Mujer<br />
+        <input type="radio" id="genero_hr" name="genero" value="3"  tabindex="8"/>Hermafrodita<br />
+        <input type="checkbox" id="nacional" name="nacional" value="true" checked="checked"  tabindex="9"/>Nacional<br />
+        <input type="submit" id="enviar" name="enviar" value="Enviar"  tabindex="10"/>
+    </form>
+    <form id="busquedaUsuario" name="busquedaUsuario">
+        <input type="search" autocomplete="on"  placeholder="Intruzca un nombre" autofocus tabindex="1" list="listaUsuarios"/>
+        <input type="submit" id="buscar" name="buscar" value="Buscar" tabindex="2"/>
+        <datalist id="listaUsuarios">
+            <option value="Luis" label="Luis García" />
+            <option value="Pedro" label="Pedro García" />
+        </datalist>
+    </form>
+    <ul contenteditable="true">
+        <li>Luis</li>
+        <li>Pedro</li>
+    </ul>
+    <input type="tel" id="sdf" form="nuevoUsuario"/>
+    <script src="js/usuario.js"></script>
+</body>
+</html>
