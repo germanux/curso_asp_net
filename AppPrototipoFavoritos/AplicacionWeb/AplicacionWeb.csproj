@@ -75,9 +75,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\estilos.css" />
     <Content Include="images\favoritos.png" />
     <Content Include="index.html" />
     <Content Include="js\ejemplos.js" />
+    <Content Include="js\index.js" />
     <Content Include="js\usuario.js" />
     <Content Include="usuarios.html" />
     <Content Include="Web.config" />
