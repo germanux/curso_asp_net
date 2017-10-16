@@ -20,12 +20,12 @@ namespace AppPrototipoFavoritos
             // EjemploUsoPOO.UsoPolimorfismo();
             //EjemploUsoPOO.UsoBusquedaAsincronaUsuarios();
 
-            EjemploDelegados observador = new EjemploDelegados();
-            EjemploUsoPOO.gesUsu = new ListaUsuarios();
-            EjemploUsoPOO.gesUsu.RegistrarObservador(observador);
+            //EjemploDelegados observador = new EjemploDelegados();
+            //EjemploUsoPOO.gesUsu = new ListaUsuarios();
+            //EjemploUsoPOO.gesUsu.RegistrarObservador(observador);
 
-            EjemploUsoPOO.UsoGestionUsuarios(observador.AvisameAlElminar);
-
+            //EjemploUsoPOO.UsoGestionUsuarios(observador.AvisameAlElminar);
+            EjemploAccess.CreaBD();
             Console.ReadKey();
         }
     }
