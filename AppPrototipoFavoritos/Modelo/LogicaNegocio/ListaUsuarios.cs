@@ -11,6 +11,7 @@ namespace Modelo
     public interface IListaUsuariosListener
     {
         void AvisameAlCrear();
+        //void AvisameAlAbdicar();
     }
     public class ListaUsuarios : IGestionUsuarios {
         private List<Persona> lista;
@@ -21,6 +22,8 @@ namespace Modelo
         }
         public void RegistrarObservador(IListaUsuariosListener observador)   {
             this.observador = observador;
+        }
+        public void DesregistrarObservador() {
         }
         public Persona this[int indice]
         {
@@ -162,6 +165,13 @@ namespace Modelo
             }
             lista = listaBuscada;
             return listaBuscada.Count > 0;
+        }
+        /// <summary>
+        /// Como el finalize() en  Java. Es llamado al eliminar el objeto.
+        /// </summary>
+        ~ListaUsuarios()   {
+            this.lista.Clear();
+            //observador.AvisameAlAbdicar();            
         }
     }
 }

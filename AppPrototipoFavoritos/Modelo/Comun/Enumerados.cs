@@ -8,8 +8,9 @@ namespace Modelo
 {
     public enum TipoGenero
     {
-        Hombre = 0,
-        Mujer = 4,
+        Indefinido = 0,
+        Hombre = 1,
+        Mujer,
         Hermafrodita
     }
 }

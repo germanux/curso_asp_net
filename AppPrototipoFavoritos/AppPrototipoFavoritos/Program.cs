@@ -24,7 +24,7 @@ namespace AppPrototipoFavoritos
             EjemploUsoPOO.gesUsu = new ListaUsuarios();
             EjemploUsoPOO.gesUsu.RegistrarObservador(observador);
 
-            EjemploUsoPOO.UsoGestionUsuarios(observador.AvisameAlModificar);
+            EjemploUsoPOO.UsoGestionUsuarios(observador.AvisameAlElminar);
 
             Console.ReadKey();
         }

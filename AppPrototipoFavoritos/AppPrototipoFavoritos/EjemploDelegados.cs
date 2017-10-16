@@ -15,9 +15,11 @@ namespace AppPrototipoFavoritos
         /// </summary>
         public void AvisameAlCrear()
         {
-            Console.WriteLine("Avisado estás del cambio CREAR");
+            var variable = "jkljklj";
+
+            Console.WriteLine("Avisado estás del cambio CREAR" + variable.ToString());
         }
-        public void AvisameAlModificar()
+        public void AvisameAlElminar()
         {
             Console.WriteLine("Avisado estás del cambio MODIFICAR");
         }

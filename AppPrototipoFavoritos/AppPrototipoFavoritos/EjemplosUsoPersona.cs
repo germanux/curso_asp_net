@@ -11,9 +11,9 @@ namespace AppPrototipoFavoritos
     {
         public static void UsoReflection()
         {
-            object obj = new Persona("03423423F", "kasdsdf@asdfasdf.com", 1980, TipoGenero.Hombre);
-            Type tipoObj = obj.GetType();
-            Type tipoPer = typeof(Persona);
+            var obj = new Persona("03423423F", "kasdsdf@asdfasdf.com", 1980, TipoGenero.Hombre);
+            var tipoObj = obj.GetType();
+            var tipoPer = typeof(Persona);
             if (tipoObj.Equals(tipoPer))
             {
                 foreach (System.Reflection.PropertyInfo propiedad in tipoPer.GetProperties())
@@ -28,8 +28,8 @@ namespace AppPrototipoFavoritos
         }
         public static void UsoPropiedades()
         {
-            Persona yo = new Persona("03423423F", "kasdsdf@asdfasdf.com", 1970, TipoGenero.Hombre);
-            Persona tu = new Persona("03423423F", "kasdsdf@asdfasdf.com", 1975, TipoGenero.Hombre);
+            var yo = new Persona("03423423F", "kasdsdf@asdfasdf.com", 1970, TipoGenero.Hombre);
+            var tu = new Persona("03423423F", "kasdsdf@asdfasdf.com", 1975, TipoGenero.Hombre);
             yo.Nombre = "Germán";
             if (yo.EsAdulto)
             {
@@ -42,15 +42,15 @@ namespace AppPrototipoFavoritos
         }
         public static void UsoClasesEstructurasEnums()
         {
-            Persona per1 = new Persona();
+            var per1 = new Persona();
             per1.Nombre = "Pablo";
             per1.Edad = 18;
-            Persona per2 = per1;// = new Persona();
+            var per2 = per1;// = new Persona();
 
-            PersonaStruct perStr1 = new PersonaStruct();
+            var perStr1 = new PersonaStruct();
             perStr1.nombre = "Pablo";
             perStr1.edad = 18;
-            PersonaStruct perStr2 = perStr1; //= new PersonaStruct();
+            var perStr2 = perStr1; //= new PersonaStruct();
 
             per1.Nombre = "Lidia";
             perStr1.nombre = "Lidia";

@@ -11,6 +11,7 @@ namespace Modelo
     {
         private string email;
         private int anio;
+        private DateTime fechaNacimiento;
         private bool nacional = true;
         private TipoGenero genero;
         public Persona() : base("") { }
