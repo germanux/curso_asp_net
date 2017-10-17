@@ -81,13 +81,27 @@
     <Content Include="js\ejemplos.js" />
     <Content Include="js\index.js" />
     <Content Include="js\usuario.js" />
+    <Content Include="nuevo_usuario.aspx" />
     <Content Include="usuarios.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\Origen.cs" />
+    <Compile Include="nuevo_usuario.aspx.cs">
+      <DependentUpon>nuevo_usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nuevo_usuario.aspx.designer.cs">
+      <DependentUpon>nuevo_usuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{26dc7d85-e1e3-4d9c-89ec-c2833344d7ad}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
