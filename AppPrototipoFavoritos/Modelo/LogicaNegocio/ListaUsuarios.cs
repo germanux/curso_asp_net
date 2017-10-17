@@ -14,7 +14,7 @@ namespace Modelo
         //void AvisameAlAbdicar();
     }
     public class ListaUsuarios : IGestionUsuarios {
-        private List<Persona> lista;
+        protected List<Persona> lista;
         private IListaUsuariosListener observador;
         public ListaUsuarios()
         {
@@ -63,7 +63,7 @@ namespace Modelo
                 }
             }
         }
-        public bool Crear(Persona persona)
+        public virtual bool Crear(Persona persona)
         {
             if (persona != null && !lista.Contains(persona))
             {
@@ -75,7 +75,7 @@ namespace Modelo
             else
                 return false;
         }
-        public bool Eliminar(int indice, TipoFuncionCallbackEliminar funCallbackAlEliminar)
+        public virtual bool Eliminar(int indice, TipoFuncionCallbackEliminar funCallbackAlEliminar)
         {
             if (Eliminar(indice))
             {
@@ -86,7 +86,7 @@ namespace Modelo
                 return false;
             }
         }
-        public bool Eliminar(int indice)
+        public virtual bool Eliminar(int indice)
         {
             if ((indice >= 0) && (indice < this.lista.Count))
             {
@@ -95,7 +95,7 @@ namespace Modelo
             }
             return false;
         }
-        public bool Eliminar(Persona persona)
+        public virtual bool Eliminar(Persona persona)
         {
             return this.lista.Remove(persona);
         }

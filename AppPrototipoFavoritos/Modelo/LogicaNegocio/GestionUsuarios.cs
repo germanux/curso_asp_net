@@ -7,85 +7,23 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    public class GestionUsuarios : IList<Persona>
+    public class GestionUsuarios : ListaUsuarios
     {
-        public Persona this[int index]
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        IPersistenciaUsuarios BD;
 
-            set
-            {
-                throw new NotImplementedException();
-            }
+        public GestionUsuarios() : base()
+        {
+            BD = new UsuariosBaseOleDB(Constantes.PROVEEDOR_ACCESS,
+                "C:\\Users\\Administrador\\Desktop\\CURSO_ASP_NET\\AppPrototipoFavoritos\\Modelo\\EmpleadosDB.mdb");
+
+            BD.ImportarAsync(lista);
         }
+        public override bool Crear(Persona persona)
 
-        public int Count
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public bool IsReadOnly
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public void Add(Persona item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Clear()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Contains(Persona item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void CopyTo(Persona[] array, int arrayIndex)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerator<Persona> GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int IndexOf(Persona item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Insert(int index, Persona item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Remove(Persona item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void RemoveAt(int index)
-        {
-            throw new NotImplementedException();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            throw new NotImplementedException();
+           bool ok = base.Crear(persona);
+           BD.ExportarAsync(lista);
+           return ok;
         }
     }
 }

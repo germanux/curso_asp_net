@@ -9,7 +9,7 @@ namespace Modelo
     interface IPersistenciaUsuarios
     {
         string NombreFichero { get; set; }
-        bool Importar(List<Persona> listaUsuarios);
-        bool Exportar(List<Persona> listaUsuarios);
+        Task<bool> ImportarAsync(List<Persona> listaUsuarios);
+        Task<bool> ExportarAsync(List<Persona> listaUsuarios);
     }
 }
