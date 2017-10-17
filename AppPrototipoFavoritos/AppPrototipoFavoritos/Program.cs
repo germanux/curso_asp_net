@@ -25,6 +25,7 @@ namespace AppPrototipoFavoritos
             //EjemploUsoPOO.gesUsu.RegistrarObservador(observador);
 
             //EjemploUsoPOO.UsoGestionUsuarios(observador.AvisameAlElminar);
+ //           EjemploAccess.ImportaBD();
             EjemploAccess.CreaBD();
             Console.ReadKey();
         }
