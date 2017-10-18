@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="Label1" runat="server" Text="Nombre" Width="150px"></asp:Label>
-            <asp:TextBox ID="TxtNombre" runat="server" Width="222px"></asp:TextBox>
+            <asp:TextBox ID="TxtNombre" runat="server" Width="222px" ></asp:TextBox>
         </div>
         <div>
             <asp:Label ID="Label2" runat="server" Text="Anio" Width="150px"></asp:Label>

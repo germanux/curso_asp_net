@@ -26,7 +26,7 @@ public partial class usuario : System.Web.UI.Page
     protected void GesUsu_EnPeticionSQL(object sender, EventArgs e)
     {
         GestionUsuarios.GesUsuEventArgs evSql = (GestionUsuarios.GesUsuEventArgs) e;
-        LstMensajes.Items.Add(new ListItem(evSql.Mensaje, "", false));
-        // LstMensajes.Items.Add(evSql.Mensaje);
+
+        LstMensajes.Items.Add(evSql.Mensaje);
     }
 }

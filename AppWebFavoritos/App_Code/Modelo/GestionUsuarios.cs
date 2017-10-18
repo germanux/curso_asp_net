@@ -24,7 +24,7 @@ public class GestionUsuarios
 
     public GestionUsuarios()
     {
-        cadena_conexion = "Server=tcp:servidorgerman.database.windows.net,1433;Initial Catalog=bd_usuarios;Persist Security Info=False;User ID=administrador;Password=SQL.1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        cadena_conexion = "Server=tcp:servidorgerman.database.windows.net,1433;Initial Catalog=bd_favoritos;Persist Security Info=False;User ID=administrador;Password=SQL.1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         insertSQL = "INSERT INTO usuario(nombre, anio) VALUES (@nombre, @anio);";
         selectSQL = "SELECT nombre, anio FROM usuario";
         conexDB = new SqlConnection(cadena_conexion);
