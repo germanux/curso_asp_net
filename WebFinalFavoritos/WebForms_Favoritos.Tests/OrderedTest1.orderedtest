@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="orderedtest1" storage="c:\users\administrador\desktop\curso_asp_net\webfinalfavoritos\webforms_favoritos.tests\orderedtest1.orderedtest" id="937f62fe-ce79-445d-8f65-64a9ba88ebdf" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="f42d5118-2036-4b5b-8c48-98b03f0c7c10" name="TestMetodoChorra_2_Ok" storage="bin\debug\webforms_favoritos.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="228d64f9-6ae8-50f8-77f0-5741a739e18f" name="TestMetodoChorra_1_Ok" storage="bin\debug\webforms_favoritos.tests.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>
