@@ -58,6 +58,7 @@
     <Compile Include="Modelo\PersonaEstruct.cs" />
     <Compile Include="Modelo\Producto.cs" />
     <Compile Include="Persistencia\IPersistenciaUsuarios.cs" />
+    <Compile Include="Persistencia\UsuariosBaseSqlServer.cs" />
     <Compile Include="Persistencia\UsuariosBaseOleDB.cs" />
     <Compile Include="Persistencia\UsuariosImportadorBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

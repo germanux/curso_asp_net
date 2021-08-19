@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace AppPrototipoFavoritos
 {
-    class EjemploAccess
+    class EjemploSqlServer
     {
         static List<Persona> lista = new List<Persona>();
-        static UsuariosBaseOleDB accessDB = new UsuariosBaseOleDB(Constantes.PROVEEDOR_ACCESS,
-                "C:\\Users\\pmpcurso1\\Desktop\\Curso_Tracasa.NET\\curso_asp_net_old.git\\AppPrototipoFavoritos\\Modelo\\EmpleadosDB.mdb");
+        static UsuariosBaseSqlServer accessDB = new UsuariosBaseSqlServer(
+                "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\pmpcurso1\\Desktop\\Curso_Tracasa.NET\\04_PruebaBD\\DBPrueba\\DBPrueba\\db_fich_prueba.mdf;Integrated Security=True;Connect Timeout=30");
 
         public static void CreaBD()
         {
