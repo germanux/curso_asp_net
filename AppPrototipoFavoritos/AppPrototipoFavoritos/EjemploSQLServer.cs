@@ -30,7 +30,8 @@ namespace AppPrototipoFavoritos
         {
             accessDB.EstadoBD += CuandoImportaBD;
             Console.WriteLine("Comenzando importacion");
-            accessDB.ImportarAsync(lista);
+            Task<bool> tareaImportar = accessDB.ImportarAsync(lista);
+            tareaImportar.RunSynchronously();
             Console.WriteLine("Metodo ImportarAsync() finalizado");
         }
         private static void DimeEstadoBD(bool estado, string mensaje)

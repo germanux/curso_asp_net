@@ -57,9 +57,9 @@ namespace Modelo
             return true;
         }
 
-        public async override Task<bool> ImportarAsync(List<Persona> listaUsuarios)
+        public override Task<bool> ImportarAsync(List<Persona> listaUsuarios)
         {
-            await Task.Yield();
+            // await Task.Yield();
             SqlCommand comando = null;
             SqlConnection conexion;
             Persona persona;
@@ -67,7 +67,8 @@ namespace Modelo
                 if (listaUsuarios == null) listaUsuarios = new List<Persona>();
                 using (conexion = new SqlConnection(this.cadenaConexion))
                 {
-                    await conexion.OpenAsync();
+                    //  await conexion.OpenAsync();
+                    conexion.Open();
                     comando = conexion.CreateCommand();
                     comando.CommandText = "SELECT nombre, email, anio, nacional, genero FROM usuario ORDER BY nombre";
                     SqlDataReader lectorDB = comando.ExecuteReader();
@@ -84,12 +85,12 @@ namespace Modelo
                     lectorDB.Close();
                 }
             }   catch (Exception ex)  {
-                this.EstadoBD(false, "ERROR EN IMPORTACION: " + ex.GetType().ToString() + ", " + ex.Message + ", " + ex.StackTrace);
-                return false;
+                this.EstadoBD?.Invoke(false, "ERROR EN IMPORTACION: " + ex.GetType().ToString() + ", " + ex.Message + ", " + ex.StackTrace);
+                return null;
             }   finally {
-                this.EstadoBD(true, string.Format("IMPORTACION OK: {0} elementÓn", listaUsuarios.Count));
+                this.EstadoBD?.Invoke(true, string.Format("IMPORTACION OK: {0} elementÓn", listaUsuarios.Count));
             }
-            return true;
+            return null;
         }
     }
 }
